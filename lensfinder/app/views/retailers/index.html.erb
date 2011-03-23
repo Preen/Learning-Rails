@@ -1,0 +1,22 @@
+<h1><%= @title %></h1>
+
+
+<table>
+  <tr>
+    <th>Produkt</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @retailers.each do |retailer| %>
+  <tr>
+    <td><%= retailer.title %></td>
+    <td><%= link_to 'Show', retailer %></td>
+    <td><%= link_to 'Edit', edit_retailer_path(retailer) %></td>
+    <td><%= link_to 'Destroy', retailer, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+
+</table>

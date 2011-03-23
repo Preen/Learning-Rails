@@ -1,0 +1,10 @@
+<%= div_for product do %>
+    <h3>
+      <%= link_to product.title, product %>
+      <span class="actions">
+        <%= link_to "Edit", edit_product_path(product) %>
+        <%= link_to "Delete", product, :confirm => "Are you sure?", :method => :delete %>
+      </span>
+    </h3>
+    <%= product.title %>
+<% end %>
